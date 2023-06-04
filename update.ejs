@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bus Tracking system</title>
+  <style>
+    * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+  }
+  
+  .container {
+    max-width: 500px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #f2f2f2;
+  }
+  
+  .btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #19A7CE;
+    color: #fff;
+    cursor: pointer;
+  }
+  .btn:hover {
+    background-color: #146C94;
+  }
+  
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Update Schedule</h1>
+    <form method="post">
+      <div class="form-group">
+        <input type="hidden" id="bus_no" name="bus_no" value="<%=busschedule[0].Bus_no %>">
+      </div>
+      <div class="form-group">
+        <label for="src">Src</label>
+        <input type="text" id="src" name="src" value="<%=busschedule[0].Src %>"required>
+      </div>
+      <div class="form-group">
+        <label for="arrival_time">Arrival_time</label>
+        <input type="time" id="arrival_time" name="arrival_time" value="<%=busschedule[0].Arrival_time %>"required>
+      </div>
+      <div class="form-group">
+        <label for="dest">Dest</label>
+        <input type="text" id="dest" name="dest" value="<%=busschedule[0].Dest %>"required>
+      </div>
+      <div class="form-group">
+        <label for="mot">MOT</label>
+        <input type="text" id="mot" name="mot" value="<%=busschedule[0].MOT %>"required>
+      </div>
+      <button type="submit" class="btn">Update</button>
+    </form>
+  </div>
+
+  
+  <!-- <script src="app.js"></script> -->
+</body>
+</html>

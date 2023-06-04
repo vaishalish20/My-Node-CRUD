@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bus-Schedule</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+</head>
+<body>
+    <h1 class="text-center text-primary">Bus Timetable</h1>
+    <table border="2" width="80%" class="table  table-hover  table-bordered border-primary ">
+        <tr>
+            <th>
+                Bus_No
+            </th>
+            <th>
+                Src
+            </th>
+            <th>
+                Arrival_time
+            </th>
+            <th>
+                Dest
+            </th>
+            <th>
+                MOT
+            </th>
+            <th>
+                Action
+            </th>
+        </tr>
+        
+        <% if(busschedule.length > 0 ){ %>
+
+        <%  for(var i=0 ; i< busschedule.length ; i++){ %>
+            <tr>
+                <td>  <%-busschedule[i].Bus_no %></td>
+                <td>  <%-busschedule[i].Src %></td>
+                <td>  <%-busschedule[i].Arrival_time %></td>
+                <td>  <%-busschedule[i].Dest %></td>
+                <td>  <%-busschedule[i].MOT %></td>
+                <td>
+                    <a href="/delete-busschedule?Bus_no=<%-busschedule[i].Bus_no %>">Delete</a>
+                    <a href="/update-busschedule?Bus_no=<%-busschedule[i].Bus_no %>">Update</a>
+                </td>
+                
+            </tr>
+
+
+            <% } %>
+
+            <% }else{ %>
+            
+            <h1>data not found!</h1>
+
+            <% } %>
+        
+    </table>
+</body>
+</html>

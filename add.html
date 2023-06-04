@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bus Tracking system</title>
+  <style>
+    * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+  }
+  
+  .container {
+    max-width: 500px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #f2f2f2;
+  }
+  
+  .btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #19A7CE;
+    color: #fff;
+    cursor: pointer;
+  }
+  .btn:hover {
+    background-color: #146C94;
+  }
+  
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Add New Schedule</h1>
+    <form action="/" method="post">
+      <div class="form-group">
+        <label for="bus_no">Bus No</label>
+        <input type="text" id="bus_no" name="bus_no" placeholder="Enter Bus No" autocomplete="off">
+      </div>
+      <div class="form-group">
+        <label for="src"> Source</label>
+        <input type="text" id="src" name="src" placeholder="Enter Source" autocomplete="off">
+      </div>
+      <div class="form-group">
+        <label for="arrival_time"> Enter Arrival_time</label>
+        <input type="time" id="arrival_time" name="arrival_time" autocomplete="off">
+      </div>
+      <div class="form-group">
+        <label for="dest">Dest</label>
+        <input type="text" id="dest" name="dest"placeholder="Enter Destination" autocomplete="off">
+      </div>
+      <div class="form-group">
+        <label for="mot">MOT</label>
+        <input type="text" id="mot" name="mot" placeholder="Enter Mode(Roadways/Pvt)" autocomplete="off">
+      </div>
+      <button type="submit" class="btn">Add Schedule</button>
+    </form>
+  </div>
+
+  
+  <script src="app.js"></script>
+</body>
+</html>
